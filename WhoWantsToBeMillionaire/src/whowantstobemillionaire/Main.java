@@ -8,7 +8,7 @@ package whowantstobemillionaire;
  *
  * @author ashwinkasoju
  */
-public class WhoWantsToBeMillionaire {
+public class Main {
 
     /**
      * @param args the command line arguments
