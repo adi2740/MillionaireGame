@@ -33,7 +33,7 @@ public class LoginScreen extends JFrame {
 
     public LoginScreen() {
         setTitle("Login to the Game");
-        setSize(350, 200);
+        setSize(400, 250);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //close the app when user hits on X
         setLayout(new BorderLayout());
 
@@ -66,7 +66,8 @@ public class LoginScreen extends JFrame {
         gbc.gridy++;
         panel.add(new JLabel("Password:"), gbc); // positioning and adding the password label
 
-        passwordField = new JPasswordField(20);
+        passwordField = new JPasswordField(25);
+        //
         gbc.gridx = 1;
         panel.add(passwordField, gbc);
 

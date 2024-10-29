@@ -25,7 +25,7 @@ public class RulesScreen extends JFrame {
 
 
         // few rules for the player
-        JTextArea rulesText = new JTextArea("This quiz has 10 questions.\n" +
+        JTextArea rulesText = new JTextArea("This quiz has 10 questions.$100,000 for each\n" +
                 "Answering all questions is mandatory.\n" +
                 "You cant go to next question without answering the current question.\n" +
                 "Results will be displayed at the end of all 10 questions.");

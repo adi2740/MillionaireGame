@@ -11,15 +11,15 @@ import java.util.List;
 public class QuizService {
     // this class is the code for having all the logic behind conducting the quiz
     private QuestionDAO questionDAO; // creating DAO class object just to utilize its mthods
-	private int currentQuestionIndex;// tracking current question
+    private int currentQuestionIndex;// tracking current question
     private List<Question> questions; // attribute for list of questions
-   
+    private int totalWinnings;
     private int score; // attribute for storing score which is initially 0
 
     public QuizService() { // no arg constructor for vreating oject
         this.questionDAO = new QuestionDAO();
         this.questions = questionDAO.getAllQuestions();
-     
+        this.totalWinnings = 0;
         this.score = 0;
     }
 
@@ -34,6 +34,7 @@ public class QuizService {
     public boolean validateUserAnswer(int optedAnswer, Question question) { //validate the user answer
         if (optedAnswer == question.getCorrectOption()) { // compare the user opted answer against the actual answer and inreate the value of score its the right answer
             score++;
+            totalWinnings += 100000; //$100,000 for each correct answer
             return true;
         }
         return false; // return false if the answer is wrong
@@ -41,5 +42,8 @@ public class QuizService {
 
     public int getScore() {
         return score; // returns the score
+    }
+    public int getTotalWinnings(){
+        return totalWinnings;
     }
 }

@@ -18,10 +18,10 @@ public class MainMenuScreen extends JFrame{
     public MainMenuScreen() {
         setTitle("Welcome to the Quiz Game");
         setSize(300, 150);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //cose the app when cliedk on X
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //close the app when clickde on X
         setLayout(new BorderLayout());
 
-        JPanel panel = new JPanel(); //setting up th epanel and its position
+        JPanel panel = new JPanel(); //setting up th panel and its position
         panel.setLayout(new GridBagLayout());
         panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 

@@ -27,4 +27,7 @@ private QuizService quizService; // object for service class to use its methods
     public int getScore() {//calls a method from service class to get the calculated score
         return quizService.getScore();
     }
+    public int getTotalWinnings(){
+        return quizService.getTotalWinnings();
+    }
 }

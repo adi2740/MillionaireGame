@@ -34,15 +34,18 @@ public class QuizScreen extends JFrame{
         JPanel mainPanel = new JPanel(); // creating panel for rendering questions and options with button
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
         mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-
+        mainPanel.setBackground(new Color(0, 0, 139));//for dark vlue
         questionLabel = new JLabel(); // creating label
-        questionLabel.setFont(new Font("Arial", Font.BOLD, 14));
+        questionLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        questionLabel.setForeground(Color.YELLOW);//yellow text
         mainPanel.add(questionLabel);
 
         options = new JRadioButton[4];
         optionsGroup = new ButtonGroup();
         for (int i = 0; i < 4; i++) { // creating 4 buttons. avoiding repeation bylooping them
             options[i] = new JRadioButton();
+            options[i].setBackground(new Color(0, 0, 139));
+            options[i].setForeground(Color.WHITE);//option text colour white
             optionsGroup.add(options[i]);
             mainPanel.add(options[i]);
         }
@@ -73,7 +76,8 @@ public class QuizScreen extends JFrame{
             options[3].setText(currentQuestion.getOption4());
             optionsGroup.clearSelection(); // Clear any previously selected option
         } else {
-            JOptionPane.showMessageDialog(this, "Thank you for playing! Your score: " + quizController.getScore() + "/10");   // once quiz is done, display the score
+            JOptionPane.showMessageDialog(this, "Thank you for playing! Your score: " + quizController.getScore() + "/10\n"+
+                    "Total Amount won: $"+ quizController.getTotalWinnings());   // once quiz is done, display the score
             dispose(); // Close the quiz window
         }
     }
